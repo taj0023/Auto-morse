@@ -85,12 +85,24 @@ reverse_d = {
 			 '..--..': '?',
 			 '-...-': '='
 			}
-
 if len(sys.argv) == 1:
-	print('Usage: "morse <morse_string> -d <delimitor>"')
+	print(f'Usage: "python3 morse.py <morse_string> -d <delimitor>"')
+	exit()
+#['./unda.py', '-d', '/', 'AN']
+if len(sys.argv) == 4:
+	if sys.argv[1] == '-d':
+		delimitor = sys.argv[2]
+		string = sys.argv[3]
+	elif sys.argv[2] == '-d':
+		delimitor = sys.argv[3]
+		string = sys.argv[1]
+elif len(sys.argv) == 2:
+	string = sys.argv[1]
+else:
+	print("INVALID ARGUMENTS!")
 	exit()
 
-string = sys.argv[1]
+
 
 def morse_decode(s):
 	l = []
@@ -107,10 +119,9 @@ def morse_encode(s):
 	l = []
 	for c in s:
 		if c == " ":
-			try:
-				if sys.argv[2] == '-d':
-					l.append(sys.argv[3])
-			except IndexError:
+			if '-d' in sys.argv:
+				l.append(delimitor)
+			else:
 				l.append("|")
 		if c.upper() in d.keys():
 			l.append(d[c.upper()])
