@@ -5,8 +5,8 @@
 
 
 ## Usage:
-* it is a s simple as entering the string
-* You can even set the delimitor using -d (optional). Default delimitor is "|"
+* It is a s simple as entering the string
+*  (optional) You can even set the delimitor using -d. Default delimitor is "|"
 
 ```zsh
 python3 morse.py "string to encode or decode"
