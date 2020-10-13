@@ -86,7 +86,7 @@ reverse_d = {
 			 '-...-': '='
 			}
 if len(sys.argv) == 1:
-	print(f'Usage: "python3 morse.py <morse_string> -d <delimitor>"')
+	print('Usage: "python3 morse.py <morse_string> -d <delimitor>"')
 	exit()
 #['./unda.py', '-d', '/', 'AN']
 if len(sys.argv) == 4:
