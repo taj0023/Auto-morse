@@ -9,11 +9,11 @@
 *  (optional) You can even set the delimitor using -d. Default delimitor is "|"
 
 ```zsh
-python3 morse.py "string to encode or decode"
-# output:-  ... - .-. .. -. --. |  - --- |  . -. -.-. --- -.. . |  --- .-. |  -.. . -.-. --- -.. .
+python3 morse.py "string to encode" -d "/"
+# output:-  ... - .-. .. -. --. /  - --- /  . -. -.-. --- -.. .
 
 OR
 
-python3 morse.py "the string you want to decode/encode" -d "/"
-#output... - .-. .. -. --. /  - --- /  . -. -.-. --- -.. . /  --- .-. /  -.. . -.-. --- -.. .
+python3 morse.py "-.. . -.-. --- -.. . -.. |  ... - .-. .. -. --."
+#output:- "decoded string"
 ```
